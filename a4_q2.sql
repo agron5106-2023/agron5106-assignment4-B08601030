@@ -10,3 +10,4 @@ LIMIT 5;
 
 -- Modify/ALTER Course table
 
+
