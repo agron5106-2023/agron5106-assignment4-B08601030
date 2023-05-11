@@ -12,3 +12,12 @@ DESCRIBE Period;
 DESCRIBE Student;
 DESCRIBE TimeSlot;
 -- Populate CourseCatalog table
+LOAD DATA INFILE 'C:/Users/Hp/Documents/111-2/Bioinformation/a4_table1.csv'
+INTO TABLE CourseCatalog
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"' 
+IGNORE 1 LINES 
+(CourseNumber) 
+SET CourseNumber = Course_number;
+
+
