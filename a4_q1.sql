@@ -184,6 +184,12 @@ INSERT INTO CourseCatalog (CourseNumber, CourseName,CollegeId) VALUES
 	('WRITE5015-01', 'Exploratary Writers on a 5-minute Stage', '134'),
 	('WRITE5018-01', 'English Written and Oral Communication for Professional Pursuit', '134'),
 	('WRITE7005', 'Fundamentals of English Writing', '134');
+SELECT 
+DISTINCT(CourseNumber),
+CourseName,
+CollegeId 
+FROM CourseCatalog;
+
 SELECT * FROM CourseCatalog;
 
 -- Populate College
