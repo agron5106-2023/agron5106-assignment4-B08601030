@@ -40,11 +40,18 @@ JOIN Course
 	JOIN TimeSlot
 	  ON Course.TimeSlotOneId =TimeSlot.TimeSlotId 
 
-SELECT * FROM TimeSlot 
+SELECT 
+	CourseNumber,
+	CourseName,
+	Day.DayName,
+	PeriodStart,
+	PeriodEnd
+FROM TimeSlot 
 JOIN Course 
 ON TimeSlot.TimeSlotId = Course.TimeSlotOneId 
 	JOIN CourseCatalog 
 	  ON Course.CourseCatalogId = CourseCatalog.CourseCatalogId 
 JOIN Day ON TimeSlot.DayId = Day.DayId
-JOIN Period ON TimeSlot.PeriodId = Period.PeriodId;;
+JOIN Period ON TimeSlot.PeriodId = Period.PeriodId
+WHERE CourseNumber in('AGRON5002','AGRON5002','AC2003','AGRON2013','AGRON5005','AGRON7033');
 
