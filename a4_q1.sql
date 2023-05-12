@@ -21,6 +21,10 @@ DELETE FROM CourseCatalog;
 INSERT INTO CourseCatalog (CourseNumber, CourseName, CollegeId)
 VALUES ('Crop Growth and Development', 'AGRON5005', '106');
 
+UPDATE CourseCatalog
+SET CourseNumber = 'AGRON5005',
+    CourseName = 'Crop Growth and Development'
+WHERE CourseCatalogId = 318;
 
 SELECT 
 DISTINCT(CourseNumber),
