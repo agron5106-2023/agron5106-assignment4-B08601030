@@ -29,7 +29,7 @@ CollegeId
 FROM CourseCatalog;
 
 DELETE FROM CourseCatalog
-WHERE CourseCatalogId = 187;
+WHERE CourseCatalogId = 248 OR CourseCatalogId=310;
 
 SELECT *FROM CourseCatalog;
 
