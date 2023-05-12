@@ -24,7 +24,10 @@ CourseName,
 CollegeId 
 FROM CourseCatalog;
 
-SELECT * FROM CourseCatalog;
+DELETE FROM CourseCatalog
+WHERE CourseCatalogId = 187;
+
+SELECT *  FROM CourseCatalog;
 
 -- Populate College
 INSERT INTO College (CollegeName, Established)
