@@ -456,8 +456,7 @@ INSERT INTO Course (CourseCatalogId, TimeSlotOneId, CourseYear, Semester, Credit
 	('318', '55', '2022', 'SPRING', '3', '0'),
 	('318', '70', '2022', 'SPRING', '3', '0');
 
-SELECT * FROM Course;
-
+SELECT * FROM Course
 JOIN Day ON TimeSlot.DayId = Day.DayId
 JOIN Period ON TimeSlot.PeriodId = Period.PeriodId;
 #LIMIT 5;

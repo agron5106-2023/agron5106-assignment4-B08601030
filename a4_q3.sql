@@ -16,7 +16,7 @@ VALUES
 SET CollegeId = 106
 WHERE NickName IN ('Maria', 'Kathy', 'John', 'Tom');
 
- ALTER TABLE Student CHANGE COLUMN StuedentId StudentId INT NOT NULL AUTO_INCREMENT;
+ALTER TABLE Student CHANGE COLUMN StuedentId StudentId INT NOT NULL AUTO_INCREMENT;
 
 -- CREATE StudentCourse table
 CREATE TABLE StudentCourse (
