@@ -5,9 +5,10 @@ DESCRIBE Course;
 
 SELECT * FROM TimeSlot 
 JOIN Day ON TimeSlot.DayId = Day.DayId
-JOIN Period ON TimeSlot.PeriodId = Period.PeriodId
-LIMIT 5;
+JOIN Period ON TimeSlot.PeriodId = Period.PeriodId;
+#LIMIT 5;
 
 -- Modify/ALTER Course table
+
 
 

@@ -4,6 +4,7 @@ USE a4_courses_b08601030;
 SHOW TABLES;
 
 DESCRIBE CourseCatalog;
+SHOW CREATE TABLE CourseCatalog;
 DESCRIBE College;
 DESCRIBE Course;
 DESCRIBE Day;
@@ -13,6 +14,7 @@ DESCRIBE Student;
 DESCRIBE TimeSlot;
 
 -- Populate CourseCatalog table
+DELETE FROM CourseCatalog;
 INSERT INTO CourseCatalog (CourseNumber, CourseName,CollegeId) VALUES
 	('AC2003', 'Soil Science', '106'),
 	('AC2003', 'Soil science', '106'),
