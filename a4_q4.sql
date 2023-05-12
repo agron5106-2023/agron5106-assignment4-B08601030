@@ -3,12 +3,16 @@
 SELECT 
 NickName,
 CourseNumber,
-Coursename
+Coursename,
+TimeSlotOneId
 FROM StudentCourse 
 JOIN Student 
 ON StudentCourse.StudentId =Student.StudentId 
 JOIN CourseCatalog
-ON StudentCourse.CourseCatalogId =CourseCatalog.CourseCatalogId; 
+ON StudentCourse.CourseCatalogId =CourseCatalog.CourseCatalogId
+JOIN Course
+ON CourseCatalog.CourseCatalogId =Course.CourseCatalogId 
+; 
 
 
 
