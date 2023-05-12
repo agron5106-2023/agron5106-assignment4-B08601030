@@ -12,6 +12,10 @@ VALUES
   ('John', 2, 103),
   ('Tom', 4, 102);
 
+ UPDATE Student
+SET CollegeId = 106
+WHERE NickName IN ('Maria', 'Kathy', 'John', 'Tom');
+
  ALTER TABLE Student CHANGE COLUMN StuedentId StudentId INT NOT NULL AUTO_INCREMENT;
 
 -- CREATE StudentCourse table
