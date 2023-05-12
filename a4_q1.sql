@@ -18,6 +18,10 @@ DELETE FROM CourseCatalog;
 
 #Use Import data to import the data into CourseCatalog 
 
+INSERT INTO CourseCatalog (CourseNumber, CourseName, CollegeId)
+VALUES ('Crop Growth and Development', 'AGRON5005', '106');
+
+
 SELECT 
 DISTINCT(CourseNumber),
 CourseName,
@@ -27,7 +31,7 @@ FROM CourseCatalog;
 DELETE FROM CourseCatalog
 WHERE CourseCatalogId = 187;
 
-SELECT *  FROM CourseCatalog;
+SELECT *FROM CourseCatalog;
 
 -- Populate College
 INSERT INTO College (CollegeName, Established)
