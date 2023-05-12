@@ -4,6 +4,7 @@ SELECT
 NickName,
 CourseNumber,
 Coursename,
+CollegeName,
 TimeSlotOneId
 FROM StudentCourse 
 JOIN Student 
@@ -12,7 +13,9 @@ JOIN CourseCatalog
 ON StudentCourse.CourseCatalogId =CourseCatalog.CourseCatalogId
 JOIN Course
 ON CourseCatalog.CourseCatalogId =Course.CourseCatalogId 
-; 
+JOIN College
+ON CourseCatalog.CollegeId =College.CollegeId ;
+#JOIN TimeSlot ON Course.TimeSlotOneId =TimeSlot.TimeSlotOneId
 
 
 
