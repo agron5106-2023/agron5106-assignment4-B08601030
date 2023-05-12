@@ -4,6 +4,14 @@ DESCRIBE Student;
 DESCRIBE Gender;
 SELECT * FROM Student;
 SELECT * FROM Gender;
+
+INSERT INTO Student (NickName, GenderId, CollegeId)
+VALUES
+  ('Maria', 1,101),
+  ('Kathy', 3, 105),
+  ('John', 2, 103),
+  ('Tom', 4, 102);
+
 -- CREATE StudentCourse table
 
 
