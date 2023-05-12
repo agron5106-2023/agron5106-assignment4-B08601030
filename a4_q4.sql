@@ -72,4 +72,14 @@ WHERE StudentCourse.CourseCatalogId IN (
 )
 GROUP BY Student.StudentId;
 
+SELECT 
+  s1.NickName AS Student1,
+  s2.NickName AS Student2,
+  COUNT(*) AS CommonCourseCount
+FROM StudentCourse sc1
+JOIN Student s1 ON sc1.StudentId = s1.StudentId
+JOIN StudentCourse sc2 ON sc1.CourseCatalogId = sc2.CourseCatalogId
+JOIN Student s2 ON sc2.StudentId = s2.StudentId
+WHERE s1.StudentId < s2.StudentId
+GROUP BY s1.StudentId, s2.StudentId;
 
