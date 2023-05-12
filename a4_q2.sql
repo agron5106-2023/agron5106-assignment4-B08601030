@@ -243,7 +243,6 @@ INSERT INTO Course (CourseCatalogId, TimeSlotOneId) VALUES
 	('246', '71'),
 	('247', '82'),
 	('247', '83'),
-	('248', '0'),
 	('249', '67'),
 	('249', '68'),
 	('250', '54'),
@@ -417,7 +416,6 @@ INSERT INTO Course (CourseCatalogId, TimeSlotOneId) VALUES
 	('309', '48'),
 	('309', '49'),
 	('309', '50'),
-	('310', '0'),
 	('311', '48'),
 	('311', '49'),
 	('311', '50'),
@@ -442,7 +440,7 @@ INSERT INTO Course (CourseCatalogId, TimeSlotOneId) VALUES
 	('318', '55'),
 	('318', '70');
 
-SELECT * FROM TimeSlot 
+SELECT * FROM Course; 
 JOIN Day ON TimeSlot.DayId = Day.DayId
 JOIN Period ON TimeSlot.PeriodId = Period.PeriodId;
 #LIMIT 5;
