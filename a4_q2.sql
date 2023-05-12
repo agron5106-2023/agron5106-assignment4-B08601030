@@ -449,6 +449,12 @@ ADD COLUMN `Semester` VARCHAR(10),
 ADD COLUMN `Credit` INT,
 ADD COLUMN `IsCompulsory` TINYINT(1);
 SELECT * FROM Course; 
+DESCRIBE Course;
+
+ALTER TABLE a4_courses_b08601030.Course
+DROP COLUMN `Year`;
+ALTER TABLE a4_courses_b08601030.Course
+ADD COLUMN CourseYear INTEGER NULL AFTER Semester;
 
 JOIN Day ON TimeSlot.DayId = Day.DayId
 JOIN Period ON TimeSlot.PeriodId = Period.PeriodId;
