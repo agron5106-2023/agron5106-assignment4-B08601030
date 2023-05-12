@@ -14,8 +14,8 @@ JOIN CourseCatalog
 	JOIN Course
 	  ON CourseCatalog.CourseCatalogId =Course.CourseCatalogId 
 	JOIN College
-	  ON CourseCatalog.CollegeId =College.CollegeId ;
-WHERE Student.StudentId=2;
+	  ON CourseCatalog.CollegeId =College.CollegeId
+WHERE StudentId=2;
 
 SELECT 
 	NickName,
@@ -41,6 +41,7 @@ JOIN Course
 	  ON Course.TimeSlotOneId =TimeSlot.TimeSlotId 
 
 SELECT 
+	IsCompulsory,
 	CourseNumber,
 	CourseName,
 	Day.DayName,
@@ -83,3 +84,20 @@ JOIN Student s2 ON sc2.StudentId = s2.StudentId
 WHERE s1.StudentId < s2.StudentId
 GROUP BY s1.StudentId, s2.StudentId;
 
+SELECT 
+NickName,
+CourseNumber,
+Coursename,
+College.CollegeName,
+TimeSlotOneId
+FROM StudentCourse 
+JOIN Student 
+  ON StudentCourse.StudentId =Student.StudentId 
+JOIN CourseCatalog
+  ON StudentCourse.CourseCatalogId =CourseCatalog.CourseCatalogId
+	JOIN Course
+	  ON CourseCatalog.CourseCatalogId =Course.CourseCatalogId 
+	JOIN College
+	  ON CourseCatalog.CollegeId =College.CollegeId
+WHERE CourseName='Crop Growth and Development' OR CourseName='Soil Science'
+ORDER BY CourseName;
