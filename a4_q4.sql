@@ -14,7 +14,7 @@ JOIN CourseCatalog
 	JOIN Course
 	  ON CourseCatalog.CourseCatalogId =Course.CourseCatalogId 
 	JOIN College
-	  ON CourseCatalog.CollegeId =College.CollegeId 
+	  ON CourseCatalog.CollegeId =College.CollegeId ;
 WHERE Student.StudentId=2;
 
 SELECT 
@@ -54,4 +54,22 @@ ON TimeSlot.TimeSlotId = Course.TimeSlotOneId
 JOIN Day ON TimeSlot.DayId = Day.DayId
 JOIN Period ON TimeSlot.PeriodId = Period.PeriodId
 WHERE CourseNumber in('AGRON5002','AGRON5002','AC2003','AGRON2013','AGRON5005','AGRON7033');
+
+SELECT 
+  Student.NickName,
+  CourseCatalog.CourseNumber,
+  CourseCatalog.CourseName,
+  College.CollegeName
+FROM StudentCourse 
+JOIN Student ON StudentCourse.StudentId = Student.StudentId 
+JOIN CourseCatalog ON StudentCourse.CourseCatalogId = CourseCatalog.CourseCatalogId
+JOIN College ON CourseCatalog.CollegeId = College.CollegeId
+WHERE StudentCourse.CourseCatalogId IN (
+  SELECT CourseCatalogId
+  FROM StudentCourse
+  GROUP BY CourseCatalogId
+  HAVING COUNT(*) > 1
+)
+GROUP BY Student.StudentId;
+
 
