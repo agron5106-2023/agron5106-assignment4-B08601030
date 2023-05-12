@@ -32,6 +32,7 @@ CREATE TABLE `Course` (
 
 SELECT * FROM TimeSlot;
 
+-- Modify/ALTER Course table
 INSERT INTO Course (CourseCatalogId, TimeSlotOneId) VALUES
 	('171', '49'),
 	('171', '50'),
@@ -440,12 +441,20 @@ INSERT INTO Course (CourseCatalogId, TimeSlotOneId) VALUES
 	('318', '55'),
 	('318', '70');
 
+DELETE FROM Course;
+
+ALTER TABLE Course
+ADD COLUMN `Year` INT,
+ADD COLUMN `Semester` VARCHAR(10),
+ADD COLUMN `Credit` INT,
+ADD COLUMN `IsCompulsory` TINYINT(1);
 SELECT * FROM Course; 
+
 JOIN Day ON TimeSlot.DayId = Day.DayId
 JOIN Period ON TimeSlot.PeriodId = Period.PeriodId;
 #LIMIT 5;
-SELECT * FROM Day;
--- Modify/ALTER Course table
+
+
 
 
 
